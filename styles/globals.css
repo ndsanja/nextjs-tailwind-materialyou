@@ -2,3 +2,466 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /*** COLOR SYSTEM ***/
+
+    /* 
+      GLOBAL COLOR SETUP (HSL)
+      Set the global colors below using HSL variables.
+      */
+
+    --primary-key-h: 268;
+    --primary-key-s: 100%;
+    --primary-key-l: 50%;
+
+    --secondary-key-h: 279;
+    --secondary-key-s: 17%;
+    --secondary-key-l: 50%;
+
+    --tertiary-key-h: 15;
+    --tertiary-key-s: 25%;
+    --tertiary-key-l: 50%;
+
+    --neutral-key-h: 277;
+    --neutral-key-s: 7%;
+    --neutral-key-l: 44%;
+
+    --neutral-variant-key-h: 272;
+    --neutral-variant-key-s: 9%;
+    --neutral-variant-key-l: 35%;
+
+    --error-key-h: 348;
+    --error-key-s: 82%;
+    --error-key-l: 50%;
+
+    /* 
+      SHADING VARIABLES
+      If you want to adjust the generated shade variants, you can adjust the percentages here.
+      Higher percentages are lighter and lower are darker.
+      */
+
+    --tone-0: 0%;
+    --tone-10: 10%;
+    --tone-20: 20%;
+    --tone-30: 30%;
+    --tone-40: 40%;
+    --tone-50: 50%;
+    --tone-60: 60%;
+    --tone-70: 70%;
+    --tone-80: 80%;
+    --tone-90: 90%;
+    --tone-95: 95%;
+    --tone-99: 99%;
+    --tone-100: 100%;
+
+    /* 
+      GLOBAL COLOR VARIABLES
+      These are the variables you can use in styling. They don't need to be edited.
+      Future plans: Auto generate full complimentary, triadic, analogous, etc. color schemes.
+      */
+
+    /*Primary*/
+    --primary: var(--primary-40);
+    --on-primary: var(--primary-100);
+    --primary-container: var(--primary-90);
+    --on-primary-container: var(--primary-10);
+
+    --primary-dark: var(--primary-80);
+    --on-primary-dark: var(--primary-20);
+    --primary-container-dark: var(--primary-30);
+    --on-primary-container-dark: var(--primary-90);
+
+    --primary-0: hsl(var(--primary-key-h), var(--primary-key-s), var(--tone-0));
+    --primary-10: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-10)
+    );
+    --primary-20: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-20)
+    );
+    --primary-30: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-30)
+    );
+    --primary-40: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-40)
+    );
+    --primary-50: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-50)
+    );
+    --primary-60: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-60)
+    );
+    --primary-70: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-70)
+    );
+    --primary-80: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-80)
+    );
+    --primary-90: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-90)
+    );
+    --primary-95: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-95)
+    );
+    --primary-99: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-99)
+    );
+    --primary-100: hsl(
+      var(--primary-key-h),
+      var(--primary-key-s),
+      var(--tone-100)
+    );
+
+    /*Secondary*/
+    --secondary: var(--secondary-40);
+    --on-secondary: var(--secondary-100);
+    --secondary-container: var(--secondary-90);
+    --on-secondary-container: var(--secondary-10);
+
+    --secondary-dark: var(--secondary-80);
+    --on-secondary-dark: var(--secondary-20);
+    --secondary-container-dark: var(--secondary-30);
+    --on-secondary-container-dark: var(--secondary-90);
+
+    --secondary-0: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-0)
+    );
+    --secondary-10: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-10)
+    );
+    --secondary-20: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-20)
+    );
+    --secondary-30: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-30)
+    );
+    --secondary-40: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-40)
+    );
+    --secondary-50: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-50)
+    );
+    --secondary-60: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-60)
+    );
+    --secondary-70: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-70)
+    );
+    --secondary-80: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-80)
+    );
+    --secondary-90: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-90)
+    );
+    --secondary-95: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-95)
+    );
+    --secondary-99: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-99)
+    );
+    --secondary-100: hsl(
+      var(--secondary-key-h),
+      var(--secondary-key-s),
+      var(--tone-100)
+    );
+
+    /*Tertiary*/
+    --tertiary: var(--tertiary-40);
+    --on-tertiary: var(--tertiary-100);
+    --tertiary-container: var(--tertiary-90);
+    --on-tertiary-container: var(--tertiary-10);
+
+    --tertiary-dark: var(--tertiary-80);
+    --on-tertiary-dark: var(--tertiary-20);
+    --tertiary-container-dark: var(--tertiary-30);
+    --on-tertiary-container-dark: var(--tertiary-90);
+
+    --tertiary-0: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-0)
+    );
+    --tertiary-10: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-10)
+    );
+    --tertiary-20: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-20)
+    );
+    --tertiary-30: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-30)
+    );
+    --tertiary-40: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-40)
+    );
+    --tertiary-50: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-50)
+    );
+    --tertiary-60: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-60)
+    );
+    --tertiary-70: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-70)
+    );
+    --tertiary-80: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-80)
+    );
+    --tertiary-90: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-90)
+    );
+    --tertiary-95: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-95)
+    );
+    --tertiary-99: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-99)
+    );
+    --tertiary-100: hsl(
+      var(--tertiary-key-h),
+      var(--tertiary-key-s),
+      var(--tone-100)
+    );
+
+    /*Neutral*/
+    --background: var(--neutral-99);
+    --on-background: var(--neutral-10);
+    --surface: var(--neutral-99);
+    --on-surface: var(--neutral-10);
+
+    --background-dark: var(--neutral-10);
+    --on-background-dark: var(--neutral-90);
+    --surface-dark: var(--neutral-10);
+    --on-surface-dark: var(--neutral-90);
+
+    --neutral-0: hsl(var(--neutral-key-h), var(--neutral-key-s), var(--tone-0));
+    --neutral-10: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-10)
+    );
+    --neutral-20: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-20)
+    );
+    --neutral-30: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-30)
+    );
+    --neutral-40: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-40)
+    );
+    --neutral-50: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-50)
+    );
+    --neutral-60: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-60)
+    );
+    --neutral-70: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-70)
+    );
+    --neutral-80: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-80)
+    );
+    --neutral-90: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-90)
+    );
+    --neutral-95: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-95)
+    );
+    --neutral-99: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-99)
+    );
+    --neutral-100: hsl(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-100)
+    );
+
+    /*Neutral Variant*/
+    --surface-variant: var(--neutral-variant-90);
+    --on-surface-variant: var(--neutral-variant-30);
+    --outline: var(--neutral-variant-50);
+
+    --surface-variant-dark: var(--neutral-variant-30);
+    --on-surface-variant-dark: var(--neutral-variant-80);
+    --outline-dark: var(--neutral-variant-60);
+
+    --neutral-variant-0: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-0)
+    );
+    --neutral-variant-10: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-10)
+    );
+    --neutral-variant-20: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-20)
+    );
+    --neutral-variant-30: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-30)
+    );
+    --neutral-variant-40: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-40)
+    );
+    --neutral-variant-50: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-50)
+    );
+    --neutral-variant-60: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-60)
+    );
+    --neutral-variant-70: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-70)
+    );
+    --neutral-variant-80: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-80)
+    );
+    --neutral-variant-90: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-90)
+    );
+    --neutral-variant-95: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-95)
+    );
+    --neutral-variant-99: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-99)
+    );
+    --neutral-variant-100: hsl(
+      var(--neutral-variant-key-h),
+      var(--neutral-variant-key-s),
+      var(--tone-100)
+    );
+
+    /*Error*/
+    --error: var(--error-40);
+    --on-error: var(--error-100);
+    --error-container: var(--error-90);
+    --on-error-container: var(--error-10);
+
+    --error-dark: var(--error-80);
+    --on-error-dark: var(--error-20);
+    --error-container-dark: var(--error-30);
+    --on-error-container-dark: var(--error-90);
+
+    --error-0: hsl(var(--error-key-h), var(--error-key-s), var(--tone-0));
+    --error-10: hsl(var(--error-key-h), var(--error-key-s), var(--tone-10));
+    --error-20: hsl(var(--error-key-h), var(--error-key-s), var(--tone-20));
+    --error-30: hsl(var(--error-key-h), var(--error-key-s), var(--tone-30));
+    --error-40: hsl(var(--error-key-h), var(--error-key-s), var(--tone-40));
+    --error-50: hsl(var(--error-key-h), var(--error-key-s), var(--tone-50));
+    --error-60: hsl(var(--error-key-h), var(--error-key-s), var(--tone-60));
+    --error-70: hsl(var(--error-key-h), var(--error-key-s), var(--tone-70));
+    --error-80: hsl(var(--error-key-h), var(--error-key-s), var(--tone-80));
+    --error-90: hsl(var(--error-key-h), var(--error-key-s), var(--tone-90));
+    --error-95: hsl(var(--error-key-h), var(--error-key-s), var(--tone-95));
+    --error-99: hsl(var(--error-key-h), var(--error-key-s), var(--tone-99));
+    --error-100: hsl(var(--error-key-h), var(--error-key-s), var(--tone-100));
+
+    /*** END COLOR SYSTEM ***/
+  }
+}
