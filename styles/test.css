@@ -1,0 +1,25 @@
+:root {
+  /*********GLOBAL SETTING*********/
+  --maxViewport: 120;
+  --minViewport: 20;
+  /*********GLOBAL SETTING*********/
+  --display-large-min-font-size: 3.563rem;
+  --display-large-max-font-size: 5.875rem;
+
+  --XX-font-display-large: calc(var(--minViewport) / 100);
+  --YY-font-display-large: calc(
+    100 *
+      (var(--display-large-max-font-size) - var(--display-large-min-font-size)) /
+      (var(--maxViewport) - var(--minViewport))
+  );
+  --ZZ-font-display-large: var(--display-large-min-font-size);
+
+  --font-display-large: clamp(
+    var(--display-large-min-font-size),
+    calc(
+      var(--ZZ-font-display-large) +
+        ((1vw - var(--XX-font-display-large)) * var(--YY-font-display-large))
+    ),
+    var(--display-large-min-font-size)
+  );
+}
