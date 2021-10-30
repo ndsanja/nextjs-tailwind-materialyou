@@ -16,22 +16,72 @@
     @apply pr-[1em];
   }
 
-  /*ELEVATED BUTTON*/
+  /***ELEVATED BUTTON***/
   .my-button-elevated {
-    @apply bg-my-color-surface text-my-color-primary shadow-md;
+    @apply bg-my-color-surface text-my-color-primary shadow-md hover:my-button-elevated-hover active:my-button-elevated-active focus:my-button-elevated-active focus:hover:bg-my-color-surface;
   }
   .my-button-elevated-primary {
-    @apply bg-my-color-primary text-my-color-on-primary shadow-md;
+    @apply bg-my-color-primary text-my-color-on-primary shadow-md hover:my-button-elevated-primary-hover active:my-button-elevated-primary-active focus:my-button-elevated-primary-active focus:hover:bg-my-color-primary;
   }
   .my-button-elevated-secondary {
-    @apply bg-my-color-secondary text-my-color-on-secondary shadow-md;
+    @apply bg-my-color-secondary text-my-color-on-secondary shadow-md hover:my-button-elevated-secondary-hover active:my-button-elevated-secondary-active focus:my-button-elevated-secondary-active focus:hover:bg-my-color-secondary;
   }
   .my-button-elevated-tertiary {
-    @apply bg-my-color-tertiary text-my-color-on-tertiary shadow-md;
+    @apply bg-my-color-tertiary text-my-color-on-tertiary shadow-md hover:my-button-elevated-tertiary-hover active:my-button-elevated-tertiary-active focus:my-button-elevated-tertiary-active focus:hover:bg-my-color-tertiary;
   }
   .my-button-elevated-error {
-    @apply bg-my-color-error text-my-color-on-error shadow-md;
+    @apply bg-my-color-error text-my-color-on-error shadow-md hover:my-button-elevated-error-hover active:my-button-elevated-error-active focus:my-button-elevated-error-active focus:hover:bg-my-color-error;
   }
+  /*DISABLED*/
+  .my-button-elevated-disabled {
+    @apply bg-my-color-on-surface/20  text-my-color-on-surface/30;
+  }
+  .my-button-elevated-primary-disabled {
+    @apply bg-my-color-primary/30 text-my-color-on-primary/50;
+  }
+  .my-button-elevated-secondary-disabled {
+    @apply bg-my-color-secondary/30 text-my-color-on-secondary/50;
+  }
+  .my-button-elevated-tertiary-disabled {
+    @apply bg-my-color-tertiary/30 text-my-color-on-tertiary/50;
+  }
+  .my-button-elevated-error-disabled {
+    @apply bg-my-color-error/30 text-my-color-on-error/50;
+  }
+  /*HOVER*/
+  .my-button-elevated-hover {
+    @apply bg-my-color-surface/70 text-my-color-primary shadow-lg transition-all duration-200 delay-75 ease-in-out;
+  }
+  .my-button-elevated-primary-hover {
+    @apply bg-my-color-primary/70 text-my-color-on-primary shadow-lg transition-all duration-200 delay-75 ease-in-out;
+  }
+  .my-button-elevated-secondary-hover {
+    @apply bg-my-color-secondary/70 text-my-color-on-secondary shadow-lg transition-all duration-200 delay-75 ease-in-out;
+  }
+  .my-button-elevated-tertiary-hover {
+    @apply bg-my-color-tertiary/70 text-my-color-on-tertiary shadow-lg transition-all duration-200 delay-75 ease-in-out;
+  }
+  .my-button-elevated-error-hover {
+    @apply bg-my-color-error/70 text-my-color-on-error shadow-lg transition-all duration-200 delay-75 ease-in-out;
+  }
+
+  /*ACTIVE*/
+  .my-button-elevated-active {
+    @apply bg-my-color-surface/70 text-my-color-primary shadow ring-4 ring-offset-2 ring-my-color-surface;
+  }
+  .my-button-elevated-primary-active {
+    @apply bg-my-color-primary/70 text-my-color-on-primary shadow ring-4 ring-offset-2 ring-my-color-primary;
+  }
+  .my-button-elevated-secondary-active {
+    @apply bg-my-color-secondary/70 text-my-color-on-secondary shadow ring-4 ring-offset-2 ring-my-color-secondary;
+  }
+  .my-button-elevated-tertiary-active {
+    @apply bg-my-color-tertiary/70 text-my-color-on-tertiary shadow ring-4 ring-offset-2 ring-my-color-tertiary;
+  }
+  .my-button-elevated-error-active {
+    @apply bg-my-color-error/70 text-my-color-on-error shadow ring-4 ring-offset-2 ring-my-color-error;
+  }
+  /***END ELEVATED BUTTON***/
 
   /*FILLED TONAL BUTTON*/
   .my-button-filled-tonal {
@@ -126,6 +176,7 @@
     --neutral-key-h: 203;
     --neutral-key-s: 10%;
     --neutral-key-l: 37%;
+    --neutral-key-a: 0.3;
 
     --neutral-variant-key-h: 173;
     --neutral-variant-key-s: 10%;
@@ -407,66 +458,83 @@
     --inverse-surface-dark: var(--neutral-90);
     --on-inverse-surface-dark: var(--neutral-20);
 
-    --neutral-0: hsl(var(--neutral-key-h), var(--neutral-key-s), var(--tone-0));
-    --neutral-10: hsl(
+    --neutral-0: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-10)
+      var(--tone-0),
+      var(--neutral-key-a)
     );
-    --neutral-20: hsl(
+    --neutral-10: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-20)
+      var(--tone-10),
+      var(--neutral-key-a)
     );
-    --neutral-30: hsl(
+    --neutral-20: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-30)
+      var(--tone-20),
+      var(--neutral-key-a)
     );
-    --neutral-40: hsl(
+    --neutral-30: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-40)
+      var(--tone-30),
+      var(--neutral-key-a)
     );
-    --neutral-50: hsl(
+    --neutral-40: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-50)
+      var(--tone-40),
+      var(--neutral-key-a)
     );
-    --neutral-60: hsl(
+    --neutral-50: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-60)
+      var(--tone-50),
+      var(--neutral-key-a)
     );
-    --neutral-70: hsl(
+    --neutral-60: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-70)
+      var(--tone-60),
+      var(--neutral-key-a)
     );
-    --neutral-80: hsl(
+    --neutral-70: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-80)
+      var(--tone-70),
+      var(--neutral-key-a)
     );
-    --neutral-90: hsl(
+    --neutral-80: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-90)
+      var(--tone-80),
+      var(--neutral-key-a)
     );
-    --neutral-95: hsl(
+    --neutral-90: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-95)
+      var(--tone-90),
+      var(--neutral-key-a)
     );
-    --neutral-99: hsl(
+    --neutral-95: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-99)
+      var(--tone-95),
+      var(--neutral-key-a)
     );
-    --neutral-100: hsl(
+    --neutral-99: hsla(
       var(--neutral-key-h),
       var(--neutral-key-s),
-      var(--tone-100)
+      var(--tone-99),
+      var(--neutral-key-a)
+    );
+    --neutral-100: hsla(
+      var(--neutral-key-h),
+      var(--neutral-key-s),
+      var(--tone-100),
+      var(--neutral-key-a)
     );
 
     /*Neutral Variant*/
