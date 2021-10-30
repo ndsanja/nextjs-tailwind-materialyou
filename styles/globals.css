@@ -5,7 +5,7 @@
 
 @layer components {
   .my-button {
-    @apply text-my-font-size-label-large px-[1.5em] py-[0.8em] rounded-full flex items-center justify-center space-x-[0.5em];
+    @apply text-my-font-size-label-large font-medium px-[1.5em] py-[0.8em] rounded-full flex items-center justify-center space-x-[0.5em];
   }
 
   .my-button-icon-left {

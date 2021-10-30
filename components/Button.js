@@ -50,7 +50,7 @@ function Button() {
       </div>
 
       <div className="flex items-center justify-center space-x-4">
-        <button className="my-button my-button-outlined my-button-icon-right">
+        <button className="my-button my-button-outlined my-button-icon-left">
           <MdOutlineArrowCircleDown />
           <p>Outlined Button</p>
         </button>
@@ -73,7 +73,7 @@ function Button() {
       </div>
 
       <div className="flex items-center justify-center space-x-4">
-        <button className="my-button my-button-text my-button-icon-right">
+        <button className="my-button my-button-text my-button-icon-left">
           <MdOutlineArrowCircleDown />
           <p>Text Button</p>
         </button>
